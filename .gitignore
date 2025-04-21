@@ -1,0 +1,18 @@
+# Ignore Terraform plugin and internal files
+terraform-infra-setup/.terraform/
+terraform-infra-setup/terraform.tfstate
+terraform-infra-setup/terraform.tfstate.backup
+terraform-infra-setup/*.tfplan
+
+# Ignore sensitive key pairs
+terraform-infra-setup/keypair/
+
+# Ignore logs
+terraform-infra-setup/crash.log
+
+# General Python + Editor junk (optional)
+__pycache__/
+*.pyc
+.env
+.vscode/
+.DS_Store

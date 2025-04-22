@@ -18,6 +18,8 @@ Follow GitHub Repo: https://github.com/KushalNishad/AWS-Jenkins-Infra-Setup.git 
 
 ![Architecture Diagram](AWS-Flask-App-Infra-Setup.drawio.png)
 
+---
+
 ### AWS Flask App Infra Setup
 ```markdown
 This repository contains Terraform configurations and CI/CD pipelines to provision and manage AWS infrastructure for

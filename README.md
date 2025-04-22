@@ -1,7 +1,8 @@
 ```markdown
 # AWS Flask App Infra Setup
 
-This repository contains Terraform configurations and CI/CD pipelines to provision and manage AWS infrastructure for deploying a Flask-based Python application. It supports both automated provisioning and deployment using **Jenkins** and **GitHub Actions**.
+This repository contains Terraform configurations and CI/CD pipelines to provision and manage AWS infrastructure for
+deploying a Flask-based Python application. It supports both automated provisioning and deployment using Jenkins.
 
 ## 🚀 Features
 
@@ -13,7 +14,6 @@ This repository contains Terraform configurations and CI/CD pipelines to provisi
 
 ## 📁 Project Structure
 
-```
 AWS-Flask-App-Infra-Setup/
 ├── jenkins/
 │   └── Jenkinsfile               # Jenkins pipeline script
@@ -29,7 +29,6 @@ AWS-Flask-App-Infra-Setup/
 ├── variables.tf                 # Input variables
 ├── outputs.tf                   # Output variables
 └── README.md                    # You're here!
-```
 
 ## 🧰 Prerequisites
 

@@ -1,6 +1,6 @@
-```markdown
-AWS Flask App Infra Setup
+## AWS Flask App Infra Setup
 
+```markdown
 This repository contains Terraform configurations and CI/CD pipelines to provision and manage AWS infrastructure for
 deploying a Flask-based Python application. It supports both automated provisioning and deployment using Jenkins.
 
@@ -11,10 +11,23 @@ deploying a Flask-based Python application. It supports both automated provision
 - 🔐 Secure credential management via Jenkins Credentials or GitHub Secrets
 - 🛠️ CI/CD automation with **Jenkins Pipeline** and **GitHub Actions**
 - 📦 Modular and reusable Terraform code
+```
 
 📁 Project Structure
 
-<pre lang="markdown"><code> AWS-Flask-App-Infra-Setup/ ├── jenkins/ │ └── Jenkinsfile # Jenkins pipeline script ├── terraform-infra-setup/ │ ├── modules/ │ │ ├── networking/ # VPC, subnets, route tables │ │ ├── ec2/ # EC2 instance setup │ │ ├── security-groups/ # Security group definitions │ │ └── iam/ # IAM roles and policies │ ├── main.tf # Root Terraform config │ ├── variables.tf # Input variables │ ├── outputs.tf # Output variables │ └── README.md # Module-specific documentation └── README.md # You're here! </code></pre>
+├── jenkins/
+│   └── Jenkinsfile               # Jenkins pipeline script
+├── terraform-infra-setup/
+│   ├── modules/
+│   │   ├── networking/               # VPC, subnets, route tables
+│   │   ├── ec2/                      # EC2 instance setup
+│   │   ├── security-groups/         # Security group definitions
+│   │   └── iam/                      # IAM roles and policies
+│   ├── main.tf                      # Root Terraform config
+│   ├── variables.tf                 # Input variables
+│   ├── outputs.tf                   # Output variables
+│   └── README.md                    # Module-specific documentation
+└── README.md                        # You're here!
 
 🧰 Prerequisites
 

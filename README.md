@@ -113,7 +113,7 @@ terraform destroy
 
 ### Learnings
 
-This document outlines key practices and solutions to improve the workflow when working with Terraform files, Jenkins, Flask, and GitHub repositories. Following these guidelines will help ensure smoother deployments and avoid common pitfalls.
+This section outlines key practices and solutions to improve the workflow when working with Terraform files, Jenkins, Flask, and GitHub repositories. Following these guidelines will help ensure smoother deployments and avoid common pitfalls.
 
 1. **Save All Files Before Managing Dependencies**
    - While working with Terraform files in VSCode, it's easy to forget to save changes before applying Terraform plans. To avoid this issue, make sure to use the following shortcut before applying the plan:
@@ -165,9 +165,6 @@ This document outlines key practices and solutions to improve the workflow when 
 
 10. **Set Correct AMI ID for Different Regions**
     - AWS AMI IDs differ across regions. Ensure that the correct AMI ID is specified in the `terraform.tfvars` file for both the Jenkins and Flask infrastructures. This will ensure the proper AMI is used when deploying resources in different regions.
-
-By following these practices, you can streamline your Terraform deployments, improve GitHub management, and ensure a smoother development and deployment process across different environments.
-```
 
 ### 🙋‍♂️ Author
 **Kushal Nishad**  

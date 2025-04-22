@@ -1,4 +1,4 @@
-## Friend's Spending Tracker: Automated CI/CD Deployment with Flask
+## Friend's Spending Tracker: Automated CI/CD Deployment of Python Flask application with Jenkins
 
 ### 📑 Table of Contents
 1. [AWS Flask App Infra Setup](#AWS-Flask-App-Infra-Setup)

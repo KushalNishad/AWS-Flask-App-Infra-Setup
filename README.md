@@ -112,7 +112,7 @@ terraform destroy
 ---
 
 ### Learnings
-```markdown
+
 This document outlines key practices and solutions to improve the workflow when working with Terraform files, Jenkins, Flask, and GitHub repositories. Following these guidelines will help ensure smoother deployments and avoid common pitfalls.
 
 1. **Save All Files Before Managing Dependencies**

@@ -2,7 +2,7 @@
 
 ### 📑 Table of Contents
 1.[AWS Flask App Infra Setup](#AWS-Flask-App-Infra-Setup)
-  - [Project Structure](#📁-Project-Structurem)
+  - [📁 Project Structure](#Project-Structurem)
   - [Setup Instructions](#🔧-Setup-Instructions)
   - [Demo Screenshots (Coming Soon)](#📷-Demo-Screenshots)
 

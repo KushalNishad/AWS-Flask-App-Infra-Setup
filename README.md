@@ -96,12 +96,11 @@ terraform destroy
 - [ ] Integrate Docker and ECS
 - [ ] Add monitoring (CloudWatch / Prometheus)
 
+---
 ### Demo Screenshots
-
+---
 
 ### 🙋‍♂️ Author
-
 **Kushal Nishad**  
 🔗 [GitHub](https://github.com/KushalNishad) | [LinkedIn](https://www.linkedin.com/in/kushal-nishad/)
-
 ---

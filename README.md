@@ -40,7 +40,7 @@ deploying a Flask-based Python application. It supports both automated provision
 ---
 
 ### 🔧 Setup Instructions
-----
+
 #### 1. Clone the Repository
 ```
 bash

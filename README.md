@@ -2,10 +2,9 @@
 
 ### 📑 Table of Contents
 1.[AWS Flask App Infra Setup](#AWS-Flask-App-Infra-Setup)
-  1. [Project Structure](#Project-Structure)
-  2. [Prerequisites](#2-initialize-terraform)
-  3. [Setup Instructions](#3-plan-and-apply-infrastructure)
-  4. [Demo Screenshots (Coming Soon)](#4-cicd-pipeline-jenkins)
+  - [Project Structure](#📁-Project-Structurem)
+  - [Setup Instructions](#🔧-Setup-Instructions)
+  - [Demo Screenshots (Coming Soon)](#📷-Demo-Screenshots)
 
 ### AWS Flask App Infra Setup
 ```markdown
@@ -90,7 +89,7 @@ terraform destroy
 - [ ] Integrate Docker and ECS
 - [ ] Add monitoring (CloudWatch / Prometheus)
 
-### 📷 Demo Screenshots (Coming Soon)
+### 📷 Demo Screenshots
 
 ### 🙋‍♂️ Author
 

@@ -37,8 +37,10 @@ deploying a Flask-based Python application. It supports both automated provision
 - Jenkins server (if using Jenkins)
 - GitHub repository & secrets (if using GitHub Actions)
 ```
+---
 
 ### 🔧 Setup Instructions
+----
 #### 1. Clone the Repository
 ```
 bash
@@ -88,5 +90,3 @@ terraform destroy
 🔗 [GitHub](https://github.com/KushalNishad) | [LinkedIn](https://www.linkedin.com/in/kushal-nishad/)
 
 ---
-
-```

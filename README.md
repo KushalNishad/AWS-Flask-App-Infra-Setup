@@ -23,20 +23,25 @@ deploying a Flask-based Python application. It supports both automated provision
 
 ### Project Structure
 ```
-├── jenkins/
-│   └── Jenkinsfile                # Jenkins pipeline script
 ├── terraform-infra-setup/
 │   ├── modules/
-│   │   ├── networking/            # VPC, subnets, route tables
-│   │   ├── ec2/                   # EC2 instance setup
-│   │   ├── security-groups/       # Security group definitions
-│   │   └── iam/                   # IAM roles and policies
-│   ├── main.tf                    # Root Terraform config
-│   ├── outputs.tf                 # Output variables
-│   ├── provider.tf                # Provider configuration
-│   ├── terraform.tfvars           # Variable values
-│   ├── variables.tf               # Input variables
-└── README.md                      # You're here!
+│   │   ├── certificate-manager/           # ACM certificate provisioning
+│   │   ├── hosted-zone/                   # Route 53 hosted zone setup
+│   │   ├── jenkins/                       # EC2 instance setup for Jenkins
+│   │   ├── load-balancer/                 # Load Balancer
+│   │   ├── load-balancer-target-group/    # Load Balancer Target Group
+│   │   ├── networking/                    # VPC, subnets, route tables
+│   │   ├── rds/                           # MySQL for persistent storage
+│   │   ├── security-groups/               # Security group definitions
+│   │   ├── user-data-script/              # Script to install Python Flask application on EC2
+│   ├── main.tf                            # Root Terraform config
+│   ├── outputs.tf                         # Output variables
+│   ├── provider.tf                        # Provider configuration
+│   ├── terraform.tfvars                   # Variable values
+│   ├── variables.tf                       # Input variables
+└── Jenkinsfile                            # Jenkins pipeline script
+└── README.md                              # You're here
+
 ```
 ### Prerequisites
 ```
@@ -84,8 +89,6 @@ terraform destroy
 
 ### 📝 To-Do
 
-- [ ] Add ALB or ELB integration
-- [ ] Add RDS module for persistent storage
 - [ ] Integrate Docker and ECS
 - [ ] Add monitoring (CloudWatch / Prometheus)
 

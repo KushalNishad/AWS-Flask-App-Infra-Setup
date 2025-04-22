@@ -12,5 +12,4 @@ ec2_ami_id                   = "ami-04f167a56786e4b09"
 domain_name                  = "kushalnishad.com"
 
 # Generate keypair with command <ssh-keygen -t rsa>
-# Below public key gets appeneded in .ssh/auth_keys file inside the instance.
-public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCqYiRkAYEcxUKt66K5jTz0FHX4UrElmEgZJUtGz6aRxJwX6F4kzoRMm+38/uqR+IJAFsR9NpXW+VPCSlJivlBw3970s/c1C1apPwA/JkVmWWJ2VNmVGcZ5Yf+/vMnoO3LR1Deztt4WcnYi/gxsLoLIIX9bLCxUn6OL6vq3mrGXHZju/tjMWT8tmQsJyPZTUIbqmc79lijRIRUdvS46ta/gZGGtqJsbggGg+sVazrGnomcuXtAGR98S0crt9NL0rxUGICQVRVvD45JVVhf46FZnHpwRT+m3OdGBzFgYQ+o7CU+m7Ie4G9EkSunetNsZZDuTE3P/ATE/Hb0sBGgKaSSEVKuZyY7yWTYdX4k/LJLpQTB8fp1N8IqUUy5bGQGS1r8EDUyYyTkRvdQZbBaRijerTAeVAQxsMWjbkFWQErUCbwtkqDxZ/HyRjUQViiPqvmq8iUETiIuI3HZmRdkJY4+k2NW9pClCfIWhLmkiv4c6KUEfPFiaozSmU1iisrUfvOE= kushal@Kushal"
+# Public key gets appeneded in .ssh/auth_keys file inside the instance.

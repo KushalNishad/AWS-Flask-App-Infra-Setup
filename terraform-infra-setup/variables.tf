@@ -44,17 +44,23 @@ variable "ec2_ami_id" {
 
 variable "public_key" {
   type        = string
-  description = "DevOps Project 1 Public key for EC2 instance"
+  description = "Flask App Public key for EC2 instance"
+  sensitive   = true
 }
 
-/*
-
-variable "ec2_user_data_install_apache" {
-  type        = string
-  description = "Script for installing the Apache2"
-}
-*/
 variable "domain_name" {
   type        = string
   description = "Name of the domain"
+}
+
+variable "mysql_username" {
+  type        = string
+  description = "Flask App Public key for EC2 instance"
+  sensitive   = true
+}
+
+variable "mysql_password" {
+  type        = string
+  description = "Flask App Public key for EC2 instance"
+  sensitive   = true
 }

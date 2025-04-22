@@ -78,7 +78,7 @@ module "rds_db_instance" {
   private_subnet_groups = tolist(module.networking.proj_py_api_private_subnets_id)
   rds_mysql_sg_id       = module.security-groups.sg_rds_mysql
   mysql_db_identifier   = "mydb"
-  mysql_username        = "flask"
-  mysql_password        = "flask_pass"
+  mysql_username        = var.mysql_username
+  mysql_password        = var.mysql_password
   mysql_dbname          = "devprojdb"
 }

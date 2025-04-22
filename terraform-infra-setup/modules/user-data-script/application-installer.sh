@@ -13,10 +13,6 @@ update-alternatives --install /usr/bin/python python /usr/bin/python3.12 1
 git clone https://github.com/KushalNishad/FinTech-Flask-app.git
 cd FinTech-Flask-app
 
-#git clone https://github.com/rahulwagh/python-mysql-db-proj-1.git
-# sleep 20
-#cd python-mysql-db-proj-1
-
 # Create and activate virtual environment
 python3.12 -m venv venv
 source venv/bin/activate

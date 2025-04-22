@@ -113,12 +113,12 @@ terraform destroy
 
 ### Learnings
 ```
-This section outlines key practices and solutions to improve the workflow when working with Terraform files, Jenkins, Flask, and GitHub repositories. Following these guidelines will help ensure smoother deployments and avoid common pitfalls.
-
-This section outlines key practices and solutions to improve the workflow when working with Terraform files, Jenkins, Flask, and GitHub repositories. Following these guidelines will help ensure smoother deployments and avoid common pitfalls.
+This section outlines key practices and solutions to improve the workflow when working with Terraform files, Jenkins, Flask, and GitHub repositories.
+Following these guidelines will help ensure smoother deployments and avoid common pitfalls.
 
 1. Save All Files Before Managing Dependencies
-   - While working with Terraform files in VSCode, it's easy to forget to save changes before applying Terraform plans. To avoid this issue, make sure to use the following shortcut before applying the plan:
+   - While working with Terraform files in VSCode, it's easy to forget to save changes before applying Terraform plans. To avoid this issue,
+     make sure to use the following shortcut before applying the plan:
      - Shortcut: Ctrl + K S
      - This command will save all files at once, ensuring that all changes are captured before applying the Terraform plan.
 
@@ -127,13 +127,16 @@ This section outlines key practices and solutions to improve the workflow when w
      - Command: terraform fmt -recursive
 
 3. Deploy Jenkins and Flask in Different Regions
-   - To prevent duplication issues for global services like Route 53, deploy Jenkins infrastructure and the Python Flask application in separate AWS regions. This approach ensures that services do not overlap, avoiding conflicts related to region-specific resources.
+   - To prevent duplication issues for global services like Route 53, deploy Jenkins infrastructure and the Python Flask application in separate AWS regions.
+     This approach ensures that services do not overlap, avoiding conflicts related to region-specific resources.
 
 4. Use a .gitignore File
-   - To protect sensitive information and prevent accidental exposure of private data, ensure that you have a .gitignore file in your repository. This will prevent sensitive files from being uploaded to public repositories like GitHub.
+   - To protect sensitive information and prevent accidental exposure of private data, ensure that you have a .gitignore file in your repository.
+     This will prevent sensitive files from being uploaded to public repositories like GitHub.
 
 5. Git Workflow: Pull Before Making Changes
-   - Always ensure that you sync your local repository with the latest changes from the remote repository. Run git pull before making any changes to avoid conflicts and ensure you're working on the most up-to-date version of the codebase.
+   - Always ensure that you sync your local repository with the latest changes from the remote repository. Run git pull before making any changes to avoid
+     conflicts and ensure you're working on the most up-to-date version of the codebase.
 
 6. Clean Up Zone.Identifier Files on Windows
    - Sometimes, Windows creates Zone.Identifier files when copying files from the internet. To find and delete these files, run the following commands:
@@ -147,9 +150,9 @@ This section outlines key practices and solutions to improve the workflow when w
 
 8. Resolve WSL Connection Issues with GitHub
    - If you're using WSL on Windows and encounter the following error when connecting to GitHub:
-     ```
+     
      Error Message: wsl Exiting, name server cannot be used: Temporary failure in name resolution (-3)
-     ```
+     
      Use the following steps to resolve it:
      1. Add Google's public DNS server to the /etc/resolv.conf:
         - nameserver 8.8.8.8
@@ -160,11 +163,13 @@ This section outlines key practices and solutions to improve the workflow when w
         generateResolvConf = false
 
 9. Fix Load Balancer Listener Port for Flask Application
-   - If the Load Balancer listener is set to port 5000 for your Flask application, it might not work properly on mobile browsers when accessed via domain name (e.g., https://kushalnishad.com). To resolve this, update the listener port to 80 in the Load Balancer configuration (main.tf):
+   - If the Load Balancer listener is set to port 5000 for your Flask application, it might not work properly on mobile browsers when accessed
+     via domain name (e.g., https://kushalnishad.com). To resolve this, update the listener port to 80 in the Load Balancer configuration (main.tf):
      - Update: Set lb_listener_port = 80
 
 10. Set Correct AMI ID for Different Regions
-    - AWS AMI IDs differ across regions. Ensure that the correct AMI ID is specified in the terraform.tfvars file for both the Jenkins and Flask infrastructures. This will ensure the proper AMI is used when deploying resources in different regions.
+    - AWS AMI IDs differ across regions. Ensure that the correct AMI ID is specified in the terraform.tfvars file for both the Jenkins and Flask infrastructures.
+      This will ensure the proper AMI is used when deploying resources in different regions.
 ```
 
 ### 🙋‍♂️ Author

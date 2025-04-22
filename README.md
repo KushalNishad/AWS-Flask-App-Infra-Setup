@@ -11,6 +11,11 @@
 ### Jenkins-Infra-Setup
 Follow GitHub Repo: https://github.com/KushalNishad/AWS-Jenkins-Infra-Setup.git to deploy Jenkins server first.
 
+### Architecture Diagram
+📝 Note: The diagram below demonstrates a high availability setup by deploying EC2 instances across multiple subnets (e.g., us-east-1a and us-east-1b). However, for this project, the Terraform code provisions a single Python Flask instance in us-east-2a. The diagram is intended solely to help visualize the concept of high availability.
+
+![Architecture Diagram](AWS-Flask-App-Infra-Setup.drawio.png)
+
 ### AWS Flask App Infra Setup
 ```markdown
 This repository contains Terraform configurations and CI/CD pipelines to provision and manage AWS infrastructure for
@@ -98,9 +103,11 @@ terraform destroy
 
 ---
 ### Demo Screenshots
+
 ---
 
 ### 🙋‍♂️ Author
 **Kushal Nishad**  
 🔗 [GitHub](https://github.com/KushalNishad) | [LinkedIn](https://www.linkedin.com/in/kushal-nishad/)
+
 ---

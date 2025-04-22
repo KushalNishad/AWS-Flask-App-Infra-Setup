@@ -113,8 +113,7 @@ terraform destroy
 
 ### Learnings
 ```
-This section outlines key practices and solutions to improve the workflow when working with Terraform files, Jenkins, Flask, and GitHub repositories.
-Following these guidelines will help ensure smoother deployments and avoid common pitfalls.
+Solutions that Helped Me Solve the Problems I Encountered While Working on This Project
 
 1. Save All Files Before Managing Dependencies
    - While working with Terraform files in VSCode, it's easy to forget to save changes before applying Terraform plans. To avoid this issue,

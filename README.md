@@ -112,59 +112,60 @@ terraform destroy
 ---
 
 ### Learnings
+```
+This section outlines key practices and solutions to improve the workflow when working with Terraform files, Jenkins, Flask, and GitHub repositories. Following these guidelines will help ensure smoother deployments and avoid common pitfalls.
 
 This section outlines key practices and solutions to improve the workflow when working with Terraform files, Jenkins, Flask, and GitHub repositories. Following these guidelines will help ensure smoother deployments and avoid common pitfalls.
 
-1. **Save All Files Before Managing Dependencies**
+1. Save All Files Before Managing Dependencies
    - While working with Terraform files in VSCode, it's easy to forget to save changes before applying Terraform plans. To avoid this issue, make sure to use the following shortcut before applying the plan:
-     - **Shortcut**: `Ctrl + K S`
+     - Shortcut: Ctrl + K S
      - This command will save all files at once, ensuring that all changes are captured before applying the Terraform plan.
 
-2. **Format Terraform Files**
+2. Format Terraform Files
    - To maintain a clean and consistent codebase, always format your Terraform files. Use the following command to format all Terraform files recursively:
-     - **Command**: `terraform fmt -recursive`
+     - Command: terraform fmt -recursive
 
-3. **Deploy Jenkins and Flask in Different Regions**
+3. Deploy Jenkins and Flask in Different Regions
    - To prevent duplication issues for global services like Route 53, deploy Jenkins infrastructure and the Python Flask application in separate AWS regions. This approach ensures that services do not overlap, avoiding conflicts related to region-specific resources.
 
-4. **Use a `.gitignore` File**
-   - To protect sensitive information and prevent accidental exposure of private data, ensure that you have a `.gitignore` file in your repository. This will prevent sensitive files from being uploaded to public repositories like GitHub.
+4. Use a .gitignore File
+   - To protect sensitive information and prevent accidental exposure of private data, ensure that you have a .gitignore file in your repository. This will prevent sensitive files from being uploaded to public repositories like GitHub.
 
-5. **Git Workflow: Pull Before Making Changes**
-   - Always ensure that you sync your local repository with the latest changes from the remote repository. Run `git pull` before making any changes to avoid conflicts and ensure you're working on the most up-to-date version of the codebase.
+5. Git Workflow: Pull Before Making Changes
+   - Always ensure that you sync your local repository with the latest changes from the remote repository. Run git pull before making any changes to avoid conflicts and ensure you're working on the most up-to-date version of the codebase.
 
-6. **Clean Up Zone.Identifier Files on Windows**
-   - Sometimes, Windows creates `Zone.Identifier` files when copying files from the internet. To find and delete these files, run the following commands:
-     - **Find**: `find . -name "*Zone.Identifier*"`
-     - **Delete**: `find . -name "*Zone.Identifier*" -exec rm -f {} \;`
+6. Clean Up Zone.Identifier Files on Windows
+   - Sometimes, Windows creates Zone.Identifier files when copying files from the internet. To find and delete these files, run the following commands:
+     - Find: find . -name "*Zone.Identifier*"
+     - Delete: find . -name "*Zone.Identifier*" -exec rm -f {} \;
 
-7. **Check Flask Application on Port 5000**
+7. Check Flask Application on Port 5000
    - If your Flask application is running on port 5000, you can use the following command to check if it's active:
-     - **Command**: `sudo lsof -i :5000`
+     - Command: sudo lsof -i :5000
    - This will show if the Flask application is successfully running on port 5000.
 
-8. **Resolve WSL Connection Issues with GitHub**
+8. Resolve WSL Connection Issues with GitHub
    - If you're using WSL on Windows and encounter the following error when connecting to GitHub:
      ```
      Error Message: wsl Exiting, name server cannot be used: Temporary failure in name resolution (-3)
      ```
      Use the following steps to resolve it:
-     1. Add Google's public DNS server to the `/etc/resolv.conf`:
-        - `nameserver 8.8.8.8`
+     1. Add Google's public DNS server to the /etc/resolv.conf:
+        - nameserver 8.8.8.8
      2. Restart the service:
-        - `sudo systemctl restart systemd-resolved.service`
-     3. To prevent the DNS configuration from being overwritten on WSL restart, add the following to `/etc/wsl.conf`:
-        ```ini
+        - sudo systemctl restart systemd-resolved.service
+     3. To prevent the DNS configuration from being overwritten on WSL restart, add the following to /etc/wsl.conf:
         [network]
         generateResolvConf = false
-        ```
 
-9. **Fix Load Balancer Listener Port for Flask Application**
-   - If the Load Balancer listener is set to port 5000 for your Flask application, it might not work properly on mobile browsers when accessed via domain name (e.g., `https://kushalnishad.com`). To resolve this, update the listener port to 80 in the Load Balancer configuration (`main.tf`):
-     - **Update**: Set `lb_listener_port = 80`
+9. Fix Load Balancer Listener Port for Flask Application
+   - If the Load Balancer listener is set to port 5000 for your Flask application, it might not work properly on mobile browsers when accessed via domain name (e.g., https://kushalnishad.com). To resolve this, update the listener port to 80 in the Load Balancer configuration (main.tf):
+     - Update: Set lb_listener_port = 80
 
-10. **Set Correct AMI ID for Different Regions**
-    - AWS AMI IDs differ across regions. Ensure that the correct AMI ID is specified in the `terraform.tfvars` file for both the Jenkins and Flask infrastructures. This will ensure the proper AMI is used when deploying resources in different regions.
+10. Set Correct AMI ID for Different Regions
+    - AWS AMI IDs differ across regions. Ensure that the correct AMI ID is specified in the terraform.tfvars file for both the Jenkins and Flask infrastructures. This will ensure the proper AMI is used when deploying resources in different regions.
+```
 
 ### 🙋‍♂️ Author
 **Kushal Nishad**  

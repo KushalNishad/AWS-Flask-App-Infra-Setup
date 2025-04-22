@@ -1,6 +1,6 @@
-## Friend's Spending Tracker: Automated CI/CD Deployment of Python Flask application with Jenkins
+# Friend's Spending Tracker: Automated CI/CD Deployment of Python Flask application with Jenkins
 
-### 📑 Table of Contents
+# 📑 Table of Contents
 1. [AWS Flask App Infra Setup](#AWS-Flask-App-Infra-Setup)
    - [🖼️ Architecture Diagram](#Architecture-Diagram)
    - [📁 Project Structure](#Project-Structure)
@@ -9,19 +9,19 @@
    - [🧠 Learnings (Best practices)](#Learnings)
      
 ---
-### Jenkins-Infra-Setup
+# Jenkins-Infra-Setup
 Follow GitHub Repo: https://github.com/KushalNishad/AWS-Jenkins-Infra-Setup.git to deploy Jenkins server first.
 
 ---
 
-### Architecture Diagram
+# Architecture Diagram
 📝 Note: The diagram below demonstrates a high availability setup by deploying EC2 instances across multiple subnets (e.g., us-east-1a and us-east-1b). However, for this project, the Terraform code provisions a single Python Flask instance in us-east-2a. The diagram is intended solely to help visualize the concept of high availability.
 
 ![AWS-Flask-App-Infra-Setup drawio](AWS-Flask-App-Infra-Setup_v2.drawio.png)
 
 ---
 
-### AWS Flask App Infra Setup
+# AWS Flask App Infra Setup
 ```markdown
 This repository contains Terraform configurations and CI/CD pipelines to provision and manage AWS infrastructure for
 deploying a Flask-based Python application in us-east-2. It supports both automated provisioning and deployment using Jenkins.
@@ -35,7 +35,7 @@ deploying a Flask-based Python application in us-east-2. It supports both automa
 - 📦 Modular and reusable Terraform code
 ```
 
-### Project Structure
+# Project Structure
 ```
 ├── terraform-infra-setup/
 │   ├── modules/
@@ -57,7 +57,7 @@ deploying a Flask-based Python application in us-east-2. It supports both automa
 └── README.md                              # You're here
 
 ```
-### Prerequisites
+# Prerequisites
 ```
 - AWS account with programmatic access (IAM user with permissions)
 - Terraform CLI (v1.3+ recommended)
@@ -65,27 +65,27 @@ deploying a Flask-based Python application in us-east-2. It supports both automa
 ```
 ---
 
-### Setup Instructions
+# Setup Instructions
 
-#### 1. Clone the Repository
+## 1. Clone the Repository
 ```
 bash
 git clone https://github.com/KushalNishad/AWS-Flask-App-Infra-Setup.git
 cd AWS-Flask-App-Infra-Setup
 ```
 
-#### 2. Initialize Terraform
+## 2. Initialize Terraform
 ```bash
 terraform init
 ```
 
-#### 3. Plan and Apply Infrastructure
+## 3. Plan and Apply Infrastructure
 ```bash
 terraform plan
 terraform apply
 ```
 
-#### 4. CI/CD Pipeline (Jenkins)
+## 4. CI/CD Pipeline (Jenkins)
 ```bash
 - Add AWS credentials to Jenkins:
   - ID: aws-credentials-kushal
@@ -94,28 +94,26 @@ terraform apply
 ```
 ---
 
-### 🧹 Tear Down
+# 🧹 Tear Down
 
 To destroy all resources:
 ```bash
 terraform destroy
 ```
 
-### 📝 To-Do
+# 📝 To-Do
 
 - [ ] Integrate Docker and ECS
 - [ ] Add monitoring (CloudWatch / Prometheus)
 
 ---
-### Demo Screenshots
+# Demo Screenshots
 
 ---
 
-### Learnings
+# Troubleshooting and Optimization Tips for the Project
 
 Solutions that Helped Me Solve the Problems I Encountered While Working on This Project
-
-# Commands That Helped Solve Issues During the Project
 
 1. **Set Correct AMI ID for Different Regions**
    - AWS AMI IDs differ across regions. Ensure that the correct AMI ID is specified in the `terraform.tfvars` file for both the Jenkins and Flask infrastructures. This will ensure the proper AMI is used when deploying resources in different regions.
@@ -172,7 +170,7 @@ Solutions that Helped Me Solve the Problems I Encountered While Working on This 
       - Update: Set `lb_listener_port = 80`
 ---
 
-### 🙋‍♂️ Author
+# 🙋‍♂️ Author
 **Kushal Nishad**  
 🔗 [GitHub](https://github.com/KushalNishad) | [LinkedIn](https://www.linkedin.com/in/kushal-nishad/)
 

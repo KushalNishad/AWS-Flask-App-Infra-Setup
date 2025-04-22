@@ -14,10 +14,10 @@ deploying a Flask-based Python application. It supports both automated provision
 
 🚀 Features
 
-- 🏗️ Infrastructure-as-Code with **Terraform**
-- ☁️ Deploys to **AWS** using EC2, VPC, Subnets, Security Groups, IAM, and more
-- 🔐 Secure credential management via Jenkins Credentials or GitHub Secrets
-- 🛠️ CI/CD automation with **Jenkins Pipeline** and **GitHub Actions**
+- 🏗️ Infrastructure-as-Code with Terraform
+- ☁️ Deploys to AWS using EC2, VPC, Subnets, Security Groups, ALB, RDS, Route 53, and Certificate Manager
+- 🔐 Secure credential management via Jenkins Credentials
+- 🛠️ CI/CD automation with Jenkins Pipeline
 - 📦 Modular and reusable Terraform code
 ```
 

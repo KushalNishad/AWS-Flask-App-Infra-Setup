@@ -1,6 +1,6 @@
 # Friend's Spending Tracker: Automated CI/CD Deployment of Python Flask application with Jenkins
 
-# 📑 Table of Contents
+## 📑 Table of Contents
 1. [AWS Flask App Infra Setup](#AWS-Flask-App-Infra-Setup)
    - [🖼️ Architecture Diagram](#Architecture-Diagram)
    - [📁 Project Structure](#Project-Structure)

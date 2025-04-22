@@ -14,32 +14,34 @@ deploying a Flask-based Python application. It supports both automated provision
 ```
 
 📁 Project Structure
-
+```
 ├── jenkins/
-│   └── Jenkinsfile               # Jenkins pipeline script
+│   └── Jenkinsfile                # Jenkins pipeline script
 ├── terraform-infra-setup/
 │   ├── modules/
-│   │   ├── networking/               # VPC, subnets, route tables
-│   │   ├── ec2/                      # EC2 instance setup
-│   │   ├── security-groups/         # Security group definitions
-│   │   └── iam/                      # IAM roles and policies
-│   ├── main.tf                      # Root Terraform config
-│   ├── variables.tf                 # Input variables
-│   ├── outputs.tf                   # Output variables
-│   └── README.md                    # Module-specific documentation
-└── README.md                        # You're here!
-
-🧰 Prerequisites
-
+│   │   ├── networking/            # VPC, subnets, route tables
+│   │   ├── ec2/                   # EC2 instance setup
+│   │   ├── security-groups/       # Security group definitions
+│   │   └── iam/                   # IAM roles and policies
+│   ├── main.tf                    # Root Terraform config
+│   ├── outputs.tf                 # Output variables
+│   ├── provider.tf                # Provider configuration
+│   ├── terraform.tfvars           # Variable values
+│   ├── variables.tf               # Input variables
+└── README.md                      # You're here!
+```
+## 🧰 Prerequisites
+```
 - AWS account with programmatic access (IAM user with permissions)
 - Terraform CLI (v1.3+ recommended)
 - Jenkins server (if using Jenkins)
 - GitHub repository & secrets (if using GitHub Actions)
+```
 
-
-🔧 Setup Instructions
+## 🔧 Setup Instructions
+```
 1. Clone the Repository
-```bash
+bash
 git clone https://github.com/KushalNishad/AWS-Flask-App-Infra-Setup.git
 cd AWS-Flask-App-Infra-Setup
 ```
@@ -61,13 +63,6 @@ terraform apply
   - ID: `aws-credentials-kushal`
   - Type: AWS Credentials
 - Run the Jenkins pipeline from the `Jenkinsfile`
-
-### 5. CI/CD Pipeline (GitHub Actions)
-
-- Add GitHub Secrets:
-  - `AWS_ACCESS_KEY_ID`
-  - `AWS_SECRET_ACCESS_KEY`
-- GitHub Actions will automatically run on `push` to `main`
 
 ## 🧹 Tear Down
 

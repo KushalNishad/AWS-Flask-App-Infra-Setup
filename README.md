@@ -6,6 +6,7 @@
    - [📁 Project Structure](#Project-Structure)
    - [🔧 Setup Instructions](#Setup-Instructions)
    - [📷 Demo Screenshots](#Demo-Screenshots)
+   - [🧠 Learnings (Best practices)](#Learnings)
      
 ---
 ### Jenkins-Infra-Setup

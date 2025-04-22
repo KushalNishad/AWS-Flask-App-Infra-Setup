@@ -1,10 +1,10 @@
 ## Friend's Spending Tracker: Automated CI/CD Deployment with Flask
 
 ### 📑 Table of Contents
-1.[AWS Flask App Infra Setup](#AWS-Flask-App-Infra-Setup)
+1. [AWS Flask App Infra Setup](#AWS-Flask-App-Infra-Setup)
   - [📁 Project Structure](#Project-Structure)
-  - [Setup Instructions](#🔧-Setup-Instructions)
-  - [Demo Screenshots](#📷-Demo-Screenshots)
+  - [🔧 Setup Instructions](#Setup-Instructions)
+  - [📷 Demo Screenshots](#Demo-Screenshots)
 
 ### AWS Flask App Infra Setup
 ```markdown
@@ -37,7 +37,7 @@ deploying a Flask-based Python application. It supports both automated provision
 │   ├── variables.tf               # Input variables
 └── README.md                      # You're here!
 ```
-### 🧰 Prerequisites
+### Prerequisites
 ```
 - AWS account with programmatic access (IAM user with permissions)
 - Terraform CLI (v1.3+ recommended)
@@ -46,7 +46,7 @@ deploying a Flask-based Python application. It supports both automated provision
 ```
 ---
 
-### 🔧 Setup Instructions
+### Setup Instructions
 
 #### 1. Clone the Repository
 ```
@@ -89,7 +89,7 @@ terraform destroy
 - [ ] Integrate Docker and ECS
 - [ ] Add monitoring (CloudWatch / Prometheus)
 
-### 📷 Demo Screenshots
+### Demo Screenshots
 
 ### 🙋‍♂️ Author
 

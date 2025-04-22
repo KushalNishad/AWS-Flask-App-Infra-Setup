@@ -2,10 +2,14 @@
 
 ### 📑 Table of Contents
 1. [AWS Flask App Infra Setup](#AWS-Flask-App-Infra-Setup)
+   - [🖼️ Architecture Diagram](#Architecture-Diagram)
    - [📁 Project Structure](#Project-Structure)
    - [🔧 Setup Instructions](#Setup-Instructions)
    - [📷 Demo Screenshots](#Demo-Screenshots)
-2. [Setting up Jenkins Infra Structure with Terraform](#Jenkins-Infra-Setup)
+     
+---
+### Jenkins-Infra-Setup
+Follow GitHub Repo: https://github.com/KushalNishad/AWS-Jenkins-Infra-Setup.git to deploy Jenkins server first.
 
 ### AWS Flask App Infra Setup
 ```markdown
@@ -94,9 +98,6 @@ terraform destroy
 
 ### Demo Screenshots
 
----
-### Jenkins-Infra-Setup
-Follow GitHub Repo: https://github.com/KushalNishad/AWS-Jenkins-Infra-Setup.git
 
 ### 🙋‍♂️ Author
 

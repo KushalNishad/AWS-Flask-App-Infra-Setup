@@ -1,5 +1,11 @@
 ## AWS Flask App Infra Setup
 
+### 📑 Table of Contents
+1. [Project Structure](#1-clone-the-repository)
+2. [Prerequisites](#2-initialize-terraform)
+3. [Setup Instructions](#3-plan-and-apply-infrastructure)
+4. [Demo Screenshots (Coming Soon)](#4-cicd-pipeline-jenkins)
+
 ```markdown
 This repository contains Terraform configurations and CI/CD pipelines to provision and manage AWS infrastructure for
 deploying a Flask-based Python application. It supports both automated provisioning and deployment using Jenkins.

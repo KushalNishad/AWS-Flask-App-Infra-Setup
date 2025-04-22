@@ -2,7 +2,7 @@
 
 ### 📑 Table of Contents
 1.[AWS Flask App Infra Setup](#AWS-Flask-App-Infra-Setup)
-  - [📁 Project Structure](#📁-Project-Structure)
+  - [📁 Project Structure](#Project-Structure)
   - [Setup Instructions](#🔧-Setup-Instructions)
   - [Demo Screenshots](#📷-Demo-Screenshots)
 
@@ -20,7 +20,7 @@ deploying a Flask-based Python application. It supports both automated provision
 - 📦 Modular and reusable Terraform code
 ```
 
-### 📁 Project Structure
+### Project Structure
 ```
 ├── jenkins/
 │   └── Jenkinsfile                # Jenkins pipeline script

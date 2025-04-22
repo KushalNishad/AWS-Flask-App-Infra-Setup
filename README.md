@@ -68,12 +68,12 @@ terraform apply
 ```
 
 #### 4. CI/CD Pipeline (Jenkins)
-
+```bash
 - Add AWS credentials to Jenkins:
   - ID: `aws-credentials-kushal`
   - Type: AWS Credentials
 - Run the Jenkins pipeline from the `Jenkinsfile`
-
+```
 ---
 
 ### 🧹 Tear Down

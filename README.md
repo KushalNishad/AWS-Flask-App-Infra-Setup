@@ -93,7 +93,7 @@ terraform destroy
 
 ---
 ### Jenkins-Infra-Setup
-Follow GitHub Repo: (https://github.com/KushalNishad/AWS-Jenkins-Infra-Setup.git)
+Follow GitHub Repo: https://github.com/KushalNishad/AWS-Jenkins-Infra-Setup.git
 
 ### 🙋‍♂️ Author
 

@@ -8,18 +8,13 @@
    - [📷 Demo Screenshots](#Demo-Screenshots)
    - [🧠 Learnings (Best practices)](#Learnings)
      
----
 # Jenkins-Infra-Setup
 Follow GitHub Repo: https://github.com/KushalNishad/AWS-Jenkins-Infra-Setup.git to deploy Jenkins server first.
-
----
 
 # Architecture Diagram
 📝 Note: The diagram below demonstrates a high availability setup by deploying EC2 instances across multiple subnets (e.g., us-east-1a and us-east-1b). However, for this project, the Terraform code provisions a single Python Flask instance in us-east-2a. The diagram is intended solely to help visualize the concept of high availability.
 
 ![AWS-Flask-App-Infra-Setup drawio](AWS-Flask-App-Infra-Setup_v2.drawio.png)
-
----
 
 # AWS Flask App Infra Setup
 ```markdown
@@ -57,13 +52,13 @@ deploying a Flask-based Python application in us-east-2. It supports both automa
 └── README.md                              # You're here
 
 ```
+
 # Prerequisites
 ```
 - AWS account with programmatic access (IAM user with permissions)
 - Terraform CLI (v1.3+ recommended)
 - Jenkins server installation script
 ```
----
 
 # Setup Instructions
 
@@ -92,7 +87,6 @@ terraform apply
   - Type: AWS Credentials
 - Run the Jenkins pipeline from the Jenkinsfile
 ```
----
 
 # 🧹 Tear Down
 
@@ -106,10 +100,8 @@ terraform destroy
 - [ ] Integrate Docker and ECS
 - [ ] Add monitoring (CloudWatch / Prometheus)
 
----
 # Demo Screenshots
 
----
 
 # Troubleshooting and Optimization Tips for the Project
 
@@ -168,10 +160,8 @@ Solutions that Helped Me Solve the Problems I Encountered While Working on This 
 11. **Fix Load Balancer Listener Port for Flask Application**
     - If the Load Balancer listener is set to port 5000 for your Flask application, it might not work properly on mobile browsers when accessed via domain name (e.g., `https://kushalnishad.com`). To resolve this, update the listener port to 80 in the Load Balancer configuration (`main.tf`):
       - Update: Set `lb_listener_port = 80`
----
+
 
 # 🙋‍♂️ Author
 **Kushal Nishad**  
 🔗 [GitHub](https://github.com/KushalNishad) | [LinkedIn](https://www.linkedin.com/in/kushal-nishad/)
-
----

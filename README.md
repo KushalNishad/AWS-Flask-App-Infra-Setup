@@ -42,7 +42,7 @@ deploying a Flask-based Python application. It supports both automated provision
 ### 🔧 Setup Instructions
 
 #### 1. Clone the Repository
-```markdown
+```
 bash
 git clone https://github.com/KushalNishad/AWS-Flask-App-Infra-Setup.git
 cd AWS-Flask-App-Infra-Setup

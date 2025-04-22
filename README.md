@@ -1,4 +1,4 @@
-## Friend's Spending Tracker Flask application deployment using CI/CD
+## Friend's Spending Tracker: Automated CI/CD Deployment with Flask
 
 ### 📑 Table of Contents
 1.[AWS Flask App Infra Setup](#AWS-Flask-App-Infra-Setup)

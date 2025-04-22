@@ -42,8 +42,7 @@ deploying a Flask-based Python application. It supports both automated provision
 ```
 - AWS account with programmatic access (IAM user with permissions)
 - Terraform CLI (v1.3+ recommended)
-- Jenkins server (if using Jenkins)
-- GitHub repository & secrets (if using GitHub Actions)
+- Jenkins server installation script
 ```
 ---
 

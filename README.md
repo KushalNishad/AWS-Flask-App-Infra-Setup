@@ -82,10 +82,11 @@ terraform apply
 
 ### 4. CI/CD Pipeline (Jenkins)
 ```bash
-- Add AWS credentials to Jenkins:
+- Add AWS credentials to Jenkins: Download Plugin AWS Steps
   - ID: aws-credentials-kushal
   - Type: AWS Credentials
-- Run the Jenkins pipeline from the Jenkinsfile
+- Start the Jenkins pipeline by configuring SCM as GitHub to fetch the Jenkinsfile.
+  - No credentials needed as the project GitHub repository is public.
 ```
 
 ## 🧹 Tear Down

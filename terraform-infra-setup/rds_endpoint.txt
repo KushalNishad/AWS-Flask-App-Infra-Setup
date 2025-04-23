@@ -1,1 +1,0 @@
-mydb.c98a60agsfko.us-east-2.rds.amazonaws.com:3306

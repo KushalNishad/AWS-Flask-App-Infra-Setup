@@ -1,6 +1,11 @@
 pipeline {
     agent any
 
+    environment {
+    DB_CREDS = credentials('mysql-db-login-credentials') // This sets DB_CREDS_USR and DB_CREDS_PSW
+    SSH_PUBLIC_KEY = credentials('ssh_public_key') // Only if you're using it
+  }
+
     parameters {
             booleanParam(name: 'PLAN_TERRAFORM', defaultValue: false, description: 'Check to plan Terraform changes')
             booleanParam(name: 'APPLY_TERRAFORM', defaultValue: false, description: 'Check to apply Terraform changes')
@@ -39,7 +44,12 @@ pipeline {
                        withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'aws-credentials-kushal']]){
                             dir('terraform-infra-setup') {
                                 sh 'echo "=================Terraform Plan=================="'
-                                sh 'terraform plan'
+                                sh '''
+                                    terraform plan \
+                                    -var="mysql_username=${DB_CREDS_USR}" \
+                                    -var="mysql_password=${DB_CREDS_PSW}" \
+                                    -var="public_key=${SSH_PUBLIC_KEY}"  # Optional if used
+                                '''
                             }
                         }
                     }
@@ -54,7 +64,12 @@ pipeline {
                        withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'aws-credentials-kushal']]){
                             dir('terraform-infra-setup') {
                                 sh 'echo "=================Terraform Apply=================="'
-                                sh 'terraform apply -auto-approve'
+                                sh '''
+                                    terraform apply -auto-approve
+                                    -var="mysql_username=${DB_CREDS_USR}" \
+                                    -var="mysql_password=${DB_CREDS_PSW}" \
+                                    -var="public_key=${SSH_PUBLIC_KEY}"  # Optional if used
+                                '''
                             }
                         }
                     }

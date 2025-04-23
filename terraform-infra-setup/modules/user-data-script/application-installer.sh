@@ -10,7 +10,7 @@ update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.12 1
 update-alternatives --install /usr/bin/python python /usr/bin/python3.12 1
 
 # Clone your repo
-git clone https://github.com/KushalNishad/FinTech-Flask-app.git
+git clone https://github.com/KushalNishad/Dockerized-Flask-app.git
 cd FinTech-Flask-app
 
 # Create and activate virtual environment

@@ -58,7 +58,7 @@ deploying a Flask-based Python application in us-east-2. It supports both automa
 │   ├── terraform.tfvars                   # Variable values
 │   ├── variables.tf                       # Input variables
 └── Jenkinsfile                            # Jenkins pipeline script
-└── README.md                              # You're here
+└── README.md                              # 👈 You're here
 
 ```
 

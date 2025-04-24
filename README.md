@@ -105,7 +105,7 @@ Follow GitHub Repo: https://github.com/KushalNishad/AWS-Jenkins-Infra-Setup.git 
 - Run **Terraform Plan** and **Terraform Apply** Stage
   - ![image](https://github.com/user-attachments/assets/25fa5454-2d78-4d15-8d3f-112860b56625)
 - After testing and deployment, ensure all resources are properly destroyed by running **Terraform Destroy** to avoid unnecessary costs and maintain a clean environment.
-  - ![image](https://github.com/user-attachments/assets/ac7d0d59-63b4-4b68-8050-dfb18f5168f0)
+  - ![image](https://github.com/user-attachments/assets/c4196833-aaa6-4a86-ad5a-3b276bba918e)
 
 ## Demo Screenshots
 

@@ -5,9 +5,9 @@
 1. [AWS Flask App Infra Setup](#AWS-Flask-App-Infra-Setup)
    - [🖼️ Architecture Diagram](#Architecture-Diagram)
    - [📁 Project Structure](#Project-Structure)
-   - [🔧 Setup Instructions](#Setup-Instructions)
-   - [📷 Demo Screenshots](#Demo-Screenshots)
-   - [🧠 Learnings (Best practices)](#Learnings)
+   - [🔧 Setup Instructions to run without CI/CD pipeline](#Setup-Instructions-to-run-without-CI/CD-Pipeline)
+   - [🔧 Setup Instructions to run with CI/CD pipeline](#CI/CD-Pipeline-with-Jenkins)
+   - [🧠Troubleshooting and Optimization Tips for the Project)](#Troubleshooting-and-Optimization-Tips-for-the-Project)
 
 ## Architecture Diagram
 📝 Note: The diagram below demonstrates a high availability setup by deploying EC2 instances across multiple subnets (e.g., us-east-1a and us-east-1b). However, for this project, the Terraform code provisions a single Python Flask instance in us-east-2a. The diagram is intended solely to help visualize the concept of high availability.
@@ -85,7 +85,7 @@ To destroy all resources:
 terraform destroy
 ```
 
-## CI/CD Pipeline (Jenkins)
+## CI/CD Pipeline with Jenkins
 
 ### 1. Install Jenkins on EC2
 Follow GitHub Repo: https://github.com/KushalNishad/AWS-Jenkins-Infra-Setup.git to deploy Jenkins server first.
@@ -104,7 +104,6 @@ Follow GitHub Repo: https://github.com/KushalNishad/AWS-Jenkins-Infra-Setup.git 
 - Start the Jenkins pipeline by configuring **SCM as GitHub to fetch the Jenkinsfile**.
 - No credentials needed as the project GitHub repository is public.
 - Run **Terraform Plan** and **Terraform Apply** Stage
-
   - ![image](https://github.com/user-attachments/assets/e25878c9-4b8e-4399-81ab-238acc6d26e1)
 
   - ![image](https://github.com/user-attachments/assets/25fa5454-2d78-4d15-8d3f-112860b56625)
@@ -116,9 +115,6 @@ Follow GitHub Repo: https://github.com/KushalNishad/AWS-Jenkins-Infra-Setup.git 
 - After testing and deployment, ensure all resources are properly destroyed by running **Terraform Destroy** to avoid unnecessary costs and maintain a clean environment.
 
   - ![image](https://github.com/user-attachments/assets/c4196833-aaa6-4a86-ad5a-3b276bba918e)
-
-## Demo Screenshots
-
 
 ## Troubleshooting and Optimization Tips for the Project
 

@@ -69,6 +69,8 @@ pipeline {
                               -var="mysql_password=${DB_CREDS_PSW}" \
                               -var="public_key=${SSH_PUBLIC_KEY}"
                         '''
+                        sh 'echo "====== Listing files in terraform-infra-setup directory ======"'
+                        sh 'ls -lart'
                     }
                 }
             }
@@ -81,6 +83,8 @@ pipeline {
             steps {
                 withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'aws-credentials-kushal']]) {
                     dir('terraform-infra-setup') {
+                        sh 'echo "====== Listing files in terraform-infra-setup directory ======"'
+                        sh 'ls -lart'
                         sh 'echo "=================Terraform Destroy=================="'
                         sh '''
                             terraform destroy -auto-approve \

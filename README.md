@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/8690c875-2a39-4d11-a07d-4d64b5279ae2)## Friend's Spending Tracker: Automated CI/CD Deployment of Python Flask application with Jenkins
+## Friend's Spending Tracker: Automated CI/CD Deployment of Python Flask application with Jenkins
 
 ## 📑 Table of Contents
 1. [AWS Flask App Infra Setup](#AWS-Flask-App-Infra-Setup)
@@ -89,8 +89,8 @@ terraform destroy
 ### 1. Install Jenkins on EC2
 Follow GitHub Repo: https://github.com/KushalNishad/AWS-Jenkins-Infra-Setup.git to deploy Jenkins server first.
 
-### 2. Define sensitive Terraform variabes in Jenkins Credential
-- <img width="949" alt="Jenkins Credentials" src="https://github.com/user-attachments/assets/29a0a86e-cb32-485b-a571-ded069989f48" />
+### 2. Define sensitive Terraform variabes in Jenkins Global credentials
+<img width="949" alt="Jenkins Credentials" src="https://github.com/user-attachments/assets/29a0a86e-cb32-485b-a571-ded069989f48" />
 
 - aws-credentials-kushal: Stores the AWS Access Key ID and Secret Access Key in Jenkins.
    - Jenkins executes Terraform commands on agents or containers. Since Terraform interacts with AWS to provision resources, Jenkins requires        these credentials to authenticate and authorize AWS API calls.

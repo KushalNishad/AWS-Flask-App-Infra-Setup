@@ -1,5 +1,6 @@
 ## Friend's Spending Tracker: Automated CI/CD Deployment of Python Flask application with Jenkins
-![image](https://github.com/user-attachments/assets/c8c1d8f1-8338-4fdf-b2f5-795054fcd5de)
+![image](https://github.com/user-attachments/assets/b10e70ad-265f-4017-85ed-a2ee8d7e896d)
+
   
 ## 📑 Table of Contents
 1. [AWS Flask App Infra Setup](#AWS-Flask-App-Infra-Setup)
@@ -110,7 +111,7 @@ Follow GitHub Repo: https://github.com/KushalNishad/AWS-Jenkins-Infra-Setup.git 
 
 - After successful Plan and Apply stage the python flask application is accessible on https://yourdomain.com
 
-  - ![image](https://github.com/user-attachments/assets/c8c1d8f1-8338-4fdf-b2f5-795054fcd5de)
+  - ![image](https://github.com/user-attachments/assets/52e77fe5-1753-4185-a89b-c86897780ba5)
 
 - After testing and deployment, ensure all resources are properly destroyed by running **Terraform Destroy** to avoid unnecessary costs and maintain a clean environment.
 

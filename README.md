@@ -100,9 +100,12 @@ Follow GitHub Repo: https://github.com/KushalNishad/AWS-Jenkins-Infra-Setup.git 
 - ssh_public_key: Assigned to the EC2 instance for SSH authentication.
 
 ### 3. Create and run Jenkins Pipeline
-- Start the Jenkins pipeline by configuring SCM as GitHub to fetch the Jenkinsfile.
+- Start the Jenkins pipeline by configuring **SCM as GitHub to fetch the Jenkinsfile**.
 - No credentials needed as the project GitHub repository is public.
-
+- Run **Terraform Plan** and **Terraform Apply** Stage
+  - ![image](https://github.com/user-attachments/assets/25fa5454-2d78-4d15-8d3f-112860b56625)
+- After testing and deployment, ensure all resources are properly destroyed by running **Terraform Destroy** to avoid unnecessary costs and maintain a clean environment.
+  - ![image](https://github.com/user-attachments/assets/ac7d0d59-63b4-4b68-8050-dfb18f5168f0)
 
 ## Demo Screenshots
 

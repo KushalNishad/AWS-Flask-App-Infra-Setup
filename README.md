@@ -122,7 +122,7 @@ Follow GitHub Repo: https://github.com/KushalNishad/AWS-Jenkins-Infra-Setup.git 
 Solutions that Helped Me Solve the Problems I Encountered While Working on This Project
 
 1. **Set Correct AMI ID for Different Regions**
-   - AWS AMI IDs differ across regions. Ensure that the correct AMI ID is specified in the `terraform.tfvars` file for both the Jenkins and Flask infrastructures. This will ensure the proper AMI is used when deploying resources in different regions.
+   - AWS AMI IDs differ across regions. Ensure that the correct AMI ID is specified in the `terraform.tfvars` file for both the Jenkins and Flask infrastructures. This will ensure that proper AMI is used when deploying resources in different regions.
 
 2. **Use `TF_VAR_variable_name` for Sensitive Information if running terraform locally**
    - Use `TF_VAR_variable_name = "Secret information like public key"` to avoid checking sensitive information in version control. Alternatively, you can use AWS KMS to perform the same task.

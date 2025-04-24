@@ -77,7 +77,7 @@ terraform plan
 terraform apply
 ```
 
-### 4. Tear Down 🧹
+### 4. Tear Down
 
 To destroy all resources:
 ```bash
@@ -100,8 +100,8 @@ Follow GitHub Repo: https://github.com/KushalNishad/AWS-Jenkins-Infra-Setup.git 
 - ssh_public_key: Assigned to the EC2 instance for SSH authentication.
 
 ### 3. Create and run Jenkins Pipeline
-- - Start the Jenkins pipeline by configuring SCM as GitHub to fetch the Jenkinsfile.
-  - No credentials needed as the project GitHub repository is public.
+- Start the Jenkins pipeline by configuring SCM as GitHub to fetch the Jenkinsfile.
+- No credentials needed as the project GitHub repository is public.
 
 
 ## Demo Screenshots
@@ -114,7 +114,7 @@ Solutions that Helped Me Solve the Problems I Encountered While Working on This 
 1. **Set Correct AMI ID for Different Regions**
    - AWS AMI IDs differ across regions. Ensure that the correct AMI ID is specified in the `terraform.tfvars` file for both the Jenkins and Flask infrastructures. This will ensure the proper AMI is used when deploying resources in different regions.
 
-2. **Use `TF_VAR_variable_name` for Sensitive Information**
+2. **Use `TF_VAR_variable_name` for Sensitive Information if running terraform locally**
    - Use `TF_VAR_variable_name = "Secret information like public key"` to avoid checking sensitive information in version control. Alternatively, you can use AWS KMS to perform the same task.
 
 3. **Save All Files Before Managing Dependencies**

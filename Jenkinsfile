@@ -15,7 +15,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                deleteDir()
+                //deleteDir()
                 git branch: 'main', url: 'https://github.com/KushalNishad/AWS-Flask-App-Infra-Setup.git'
                 sh 'ls -lart'
             }

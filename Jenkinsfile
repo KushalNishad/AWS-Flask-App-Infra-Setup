@@ -27,6 +27,8 @@ pipeline {
                     dir('terraform-infra-setup') {
                         sh 'echo "=================Terraform Init=================="'
                         sh 'terraform init'
+                        sh 'echo "====== Listing files in terraform-infra-setup directory ======"'
+                        sh 'ls -lart'
                     }
                 }
             }
@@ -46,6 +48,8 @@ pipeline {
                               -var="mysql_password=${DB_CREDS_PSW}" \
                               -var="public_key=${SSH_PUBLIC_KEY}"
                         '''
+                        sh 'echo "====== Listing files in terraform-infra-setup directory ======"'
+                        sh 'ls -lart'
                     }
                 }
             }

@@ -1,4 +1,4 @@
-## Friend's Spending Tracker: Automated CI/CD Deployment of Python Flask application with Jenkins
+![image](https://github.com/user-attachments/assets/8690c875-2a39-4d11-a07d-4d64b5279ae2)## Friend's Spending Tracker: Automated CI/CD Deployment of Python Flask application with Jenkins
 
 ## 📑 Table of Contents
 1. [AWS Flask App Infra Setup](#AWS-Flask-App-Infra-Setup)
@@ -7,9 +7,6 @@
    - [🔧 Setup Instructions](#Setup-Instructions)
    - [📷 Demo Screenshots](#Demo-Screenshots)
    - [🧠 Learnings (Best practices)](#Learnings)
-     
-## Jenkins-Infra-Setup
-Follow GitHub Repo: https://github.com/KushalNishad/AWS-Jenkins-Infra-Setup.git to deploy Jenkins server first.
 
 ## Architecture Diagram
 📝 Note: The diagram below demonstrates a high availability setup by deploying EC2 instances across multiple subnets (e.g., us-east-1a and us-east-1b). However, for this project, the Terraform code provisions a single Python Flask instance in us-east-2a. The diagram is intended solely to help visualize the concept of high availability.
@@ -60,7 +57,7 @@ deploying a Flask-based Python application in us-east-2. It supports both automa
 - Jenkins server installation script
 ```
 
-## Setup Instructions
+## Setup Instructions to run without CI/CD Pipeline
 
 ### 1. Clone the Repository
 ```
@@ -80,26 +77,32 @@ terraform plan
 terraform apply
 ```
 
-### 4. CI/CD Pipeline (Jenkins)
-```bash
-- Add AWS credentials to Jenkins: Download Plugin AWS Steps
-  - ID: aws-credentials-kushal
-  - Type: AWS Credentials
-- Start the Jenkins pipeline by configuring SCM as GitHub to fetch the Jenkinsfile.
-  - No credentials needed as the project GitHub repository is public.
-```
-
-## 🧹 Tear Down
+### 4. Tear Down 🧹
 
 To destroy all resources:
 ```bash
 terraform destroy
 ```
 
-## 📝 To-Do
+## CI/CD Pipeline (Jenkins)
 
-- [ ] Integrate Docker and ECS
-- [ ] Add monitoring (CloudWatch / Prometheus)
+### 1. Install Jenkins on EC2
+Follow GitHub Repo: https://github.com/KushalNishad/AWS-Jenkins-Infra-Setup.git to deploy Jenkins server first.
+
+### 2. Define sensitive Terraform variabes in Jenkins Credential
+- <img width="949" alt="Jenkins Credentials" src="https://github.com/user-attachments/assets/29a0a86e-cb32-485b-a571-ded069989f48" />
+
+- aws-credentials-kushal: Stores the AWS Access Key ID and Secret Access Key in Jenkins.
+   - Jenkins executes Terraform commands on agents or containers. Since Terraform interacts with AWS to provision resources, Jenkins requires        these credentials to authenticate and authorize AWS API calls.
+   - Requires **AWS Steps** plugin for integration.
+- mysql-db-login-credentials: Stores MySQL username and password used by Terraform to create an RDS instance.
+- ssh_private_key: Used for SSH/SCP access to the EC2 instance hosting the Flask app.
+- ssh_public_key: Assigned to the EC2 instance for SSH authentication.
+
+### 3. Create and run Jenkins Pipeline
+- - Start the Jenkins pipeline by configuring SCM as GitHub to fetch the Jenkinsfile.
+  - No credentials needed as the project GitHub repository is public.
+
 
 ## Demo Screenshots
 
@@ -162,6 +165,10 @@ Solutions that Helped Me Solve the Problems I Encountered While Working on This 
     - If the Load Balancer listener is set to port 5000 for your Flask application, it might not work properly on mobile browsers when accessed via domain name (e.g., `https://kushalnishad.com`). To resolve this, update the listener port to 80 in the Load Balancer configuration (`main.tf`):
       - Update: Set `lb_listener_port = 80`
 
+## 📝 To-Do
+
+- [ ] Integrate Docker and ECS
+- [ ] Add monitoring (CloudWatch / Prometheus)
 
 ## 🙋‍♂️ Author
 **Kushal Nishad**  

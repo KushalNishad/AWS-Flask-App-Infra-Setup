@@ -27,6 +27,16 @@ deploying a Flask-based Python application in us-east-2. It supports both automa
 - 🔐 Secure credential management via Jenkins Credentials
 - 🛠️ CI/CD automation with Jenkins Pipeline
 - 📦 Modular and reusable Terraform code
+
+- certificate-manager: Manages SSL/TLS certificates for secure HTTPS connections.​
+- ec2-instance: Provisions an EC2 instance to host the Flask application.​
+- hosted-zone: Sets up a Route 53 hosted zone for domain name management.​
+- load-balancer-target-group: Defines target groups for the load balancer to route traffic to EC2 instances.​
+- load-balancer: Creates an Application Load Balancer (ALB) to distribute incoming traffic across multiple targets.​
+- networking: Establishes networking components such as VPCs, subnets, and route tables.​
+- rds: Deploys a Relational Database Service (RDS) instance for the application's database needs.​
+- security-groups: Configures security groups to control inbound and outbound traffic to AWS resources.​
+- user-data-script: Contains initialization scripts that run on the EC2 instance during launch, typically used to install dependencies and start the Flask application.​
 ```
 
 ## Project Structure
